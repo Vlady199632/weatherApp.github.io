@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="assets/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/styleWeather.css">
+        <title>Local Weather</title>
+</head>
+<body>
+        <div class="wrapper">
+                <div class="container">
+                        <header class="header  row justify-content-between align-content-center">
+                                <div class="logo col-4">
+                                        <h1 class="title">CURRENT WEATHER</h1>
+                                </div><!--/.logo-->
+                                <div class="search row col-6 align-content-center ">
+                                        <div class="form">
+                                                <form action="#" name="location" id="myForm">
+                                                        <input type="search" name="city" id="location-city" value="">
+                                                        <button type="submit" class="submit" >
+                                                                <i class="fa-solid fa-magnifying-glass" id="btn-submit"></i>
+                                                        </button>
+                                                </form><!--/.form[name=location]-->
+                                        </div><!--/.form-->
+                                </div><!--/.search-->
+                        </header><!--/.header-->
+                </div><!--/.container-->
+                <section class="current container" id="section1">
+                        <div class="section__header row justify-content-between">
+                                <h2 class="title col-4" id="city-name">City</h2>
+                                <h2 class="title current__date col-6 text-end" id="date">Today</h2>
+                        </div><!--/.section__header-->
+                        <div class="section__content row justify-content-between">
+                                <div class="current__view col-3">
+                                        <h2 class="subtitle" id="sun">Sunny</h2>
+                                        <div class="current__icon">
+                                                <img src="" id="sun-img">
+                                        </div>
+                                </div><!--/.current__view-->
+                                <div class="temperature row col-3 align-content-center justify-content-center text-center">
+                                        <h2 class="big__text row" id="temp">&#176;C</h2>
+                                </div><!--/.temperature-->
+                                <div class="full-temperature row col-4 justify-content-between align-content-between">
+                                        <div class="item row justify-content-around">
+                                                <h3 class="subtitle col-7">Min temperature:</h3>
+                                                <h3 class="subtitle col-3" id="min-temp">&#176;C</h3>
+                                        </div><!--/.item-->
+                                        
+                                        <div class="item row justify-content-around">
+                                                <h3 class="subtitle col-7">Max temperature:</h3>
+                                                <h3 class="subtitle col-3" id="max-temp">&#176;C</h3>
+                                        </div><!--/.item-->
+                                        
+                                        <div class="item row justify-content-around">
+                                                <h3 class="subtitle col-7">Wind speed (km/vh):</h3>
+                                                <h3 class="subtitle col-3" id="wind-speed">km/h</h3>
+                                        </div><!--/.item-->
+                                        
+                                </div><!--/.full__temperature-->
+                        </div><!--/.section__content-->
+                </section><!--/.current-->
+                <section class="hourly container" id="section2">
+                        <div class="section__header row justify-content-start">
+                                <h2 class="title col-4">Hourly</h2>
+                        </div><!--/.section__header-->
+                        <div class="section__content container row justify-content-between">
+                                <div class="info_item col-auto">
+                                        <h3 class="subtitle" id="day"></h3>
+                                        <div class="empty"></div>
+                                        <div class="item__text row text-center">Forecast:</div>
+                                        <div class="item__text row text-center">Temp(C):</div>
+                                        <div class="item__text row text-center">Wind (km/h):</div>
+                                </div><!--/.hourly__item-->
+                                
+                                <div class="hourly_item col-auto">
+                                        <h3 class="subtitle" id="time0">7:00</h3>
+                                        <div class="hourly__icon">
+                                                <img src="" alt="" id="hourly-img-Seven">
+                                        </div>
+                                        <div class="item__text row text-center" id="hourly-forecast-Seven">Forecast</div>
+                                        <div class="item__text row text-center" id="hourly-temp-Seven">&#176;C</div>
+                                        <div class="item__text row text-center" id="hourly-windSpeed-Seven">km/h</div>
+                                </div><!--/.hourly__item-->
+                                
+                                <div class="hourly_item col-auto">
+                                        <h3 class="subtitle" id="time1">10:00</h3>
+                                        <div class="hourly__icon">
+                                                <img src="" alt="" id="hourly-img-Ten">
+                                        </div>
+                                        <div class="item__text row text-center" id="hourly-forecast-ten">Forecast</div>
+                                        <div class="item__text row text-center" id="hourly-temp-ten">&#176;C</div>
+                                        <div class="item__text row text-center" id="hourly-windSpeed-ten">km/h</div>
+                                </div><!--/.hourly__item-->
+                                
+                                <div class="hourly_item col-auto">
+                                        <h3 class="subtitle" id="time2">13:00</h3>
+                                        <div class="hourly__icon">
+                                                <img src="" alt="" id="hourly-img-onePm">
+                                        </div>
+                                        <div class="item__text row text-center" id="hourly-forecast-onePm">Forecast</div>
+                                        <div class="item__text row text-center" id="hourly-temp-onePm">&#176;C</div>
+                                        <div class="item__text row text-center" id="hourly-windSpeed-onePm">km/h</div>
+                                </div><!--/.hourly__item-->
+                                
+                                <div class="hourly_item col-auto">
+                                        <h3 class="subtitle" id="time3">15:00</h3>
+                                        <div class="hourly__icon">
+                                                <img src="" alt="" id="hourly-img-threePm">
+                                        </div>
+                                        <div class="item__text row text-center" id="hourly-forecast-threePm">Forecast</div>
+                                        <div class="item__text row text-center" id="hourly-temp-threePm">&#176;C</div>
+                                        <div class="item__text row text-center" id="hourly-windSpeed-threePm">km/h</div>
+                                </div><!--/.hourly__item-->
+                                
+                                <div class="hourly_item col-auto">
+                                        <h3 class="subtitle" id="time4">18:00</h3>
+                                        <div class="hourly__icon">
+                                                <img src="" alt="" id="hourly-img-sixPm">
+                                        </div>
+                                        <div class="item__text row text-center" id="hourly-forecast-sixPm">Forecast</div>
+                                        <div class="item__text row text-center" id="hourly-temp-sixPm">&#176;C</div>
+                                        <div class="item__text row text-center" id="hourly-windSpeed-sixPm">km/h</div>
+                                </div><!--/.hourly__item-->
+                                
+                        
+                                <div class="hourly_item col-auto">
+                                        <h3 class="subtitle" id="time5">21:00</h3>
+                                        <div class="hourly__icon">
+                                                <img src="" alt="" id="hourly-img-ninePm">
+                                        </div>
+                                        <div class="item__text row text-center" id="hourly-forecast-ninePm">Forecast</div>
+                                        <div class="item__text row text-center" id="hourly-temp-ninePm">&#176;C</div>
+                                        <div class="item__text row text-center" id="hourly-windSpeed-ninePm">km/h</div>
+                                </div><!--/.hourly__item-->
+                        </div><!--/.section__content-->
+                </section><!--/.hourly-->
+        </div><!--/.wrapper-->
+        
+        <span style="display: none" id="celsius">&#8451;</span>
+        
+        <!--fontAwesome-->
+        <script src="https://kit.fontawesome.com/ca01a98a4e.js" crossorigin="anonymous"></script>
+        <!--jQuery-->
+        <script src="assets/jquery/jquery-3.5.1.min.js"></script>
+        <!--Axios-->
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!--scriptWeather-->
+        <script src ="assets/scriptWeather.js"></script>
+</body>
+</html>
