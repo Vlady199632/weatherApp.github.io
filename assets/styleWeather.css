@@ -6,7 +6,6 @@
 }
 
 .wrapper {
-    background-color: #e5e5e5;
     padding: 50px 50px;
 }
 
@@ -66,7 +65,7 @@ form[name=location] {
     max-width: 200px;
 }
 .submit {
-    background-color: #e5e5e5;
+    background-color: white;
     margin-left: 1em
 }
 
